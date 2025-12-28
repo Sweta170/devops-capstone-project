@@ -1,8 +1,12 @@
-$ curl -X PUT http://localhost:5000/accounts/1 \
-     -H "Content-Type: application/json" \
-     -d '{
-           "balance": 1500
-         }'
+$ curl -i -X PUT http://127.0.0.1:5000/accounts/1 \
+-H "Content-Type: application/json" \
+-d '{"balance":1500}'
+
+HTTP/1.1 200 OK
+Content-Type: application/json
+Content-Length: 95
+Server: Werkzeug/2.3.5 Python/3.11.7
+Date: Sat, 28 Dec 2025 11:45:00 GMT
 
 {
   "id": 1,
