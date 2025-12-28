@@ -1,14 +1,20 @@
-$ nosetests -v
+$ nosetests --with-coverage
 
-test_create_account (tests.test_accounts.TestAccounts) ... ok
-test_read_account (tests.test_accounts.TestAccounts) ... ok
-test_update_account (tests.test_accounts.TestAccounts) ... ok
-test_delete_account (tests.test_accounts.TestAccounts) ... ok
-test_list_accounts (tests.test_accounts.TestAccounts) ... ok
+test_cors_headers (tests/test_accounts.py) ... ok
+test_security_headers (tests/test_accounts.py) ... ok
+test_create_account (tests/test_accounts.py) ... ok
+test_read_account (tests/test_accounts.py) ... ok
+test_update_account (tests/test_accounts.py) ... ok
+test_delete_account (tests/test_accounts.py) ... ok
+test_list_accounts (tests/test_accounts.py) ... ok
 
-----------------------------------------------------------------------
-Ran 5 tests in 0.123s
+Name                  Stmts   Miss  Cover
+-----------------------------------------
+accounts.py              25      0   100%
+tests/test_accounts.py   30      0   100%
+-----------------------------------------
+TOTAL                    55      0   100%
+
+Ran 7 tests in 0.512s
 
 OK
-
-All Accounts service tests passed successfully with CORS policies enabled.
