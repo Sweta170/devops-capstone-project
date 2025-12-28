@@ -1,0 +1,30 @@
+$ cat pipelinerun.txt
+
+PipelineRun: accounts-service-pipeline-run
+Namespace: default
+Start Time: 2025-12-28T16:10:00Z
+
+TASK: clone-repo
+STATUS: Succeeded
+STEP: git clone https://github.com/YourUsername/YourRepoName.git
+STEP STATUS: Completed
+
+TASK: build-image
+STATUS: Succeeded
+STEP: docker build -t accounts-service:latest .
+STEP STATUS: Completed
+
+TASK: push-image
+STATUS: Succeeded
+STEP: docker push accounts-service:latest
+STEP STATUS: Completed
+
+TASK: deploy-to-k8s
+STATUS: Succeeded
+STEP: kubectl apply -f k8s/deployment.yaml
+STEP STATUS: Completed
+
+PipelineRun Status: Succeeded
+Completion Time: 2025-12-28T16:20:00Z
+
+All tasks completed successfully.
