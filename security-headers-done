@@ -1,0 +1,14 @@
+$ nosetests -v
+
+test_create_account (tests.test_accounts.TestAccounts) ... ok
+test_read_account (tests.test_accounts.TestAccounts) ... ok
+test_update_account (tests.test_accounts.TestAccounts) ... ok
+test_delete_account (tests.test_accounts.TestAccounts) ... ok
+test_list_accounts (tests.test_accounts.TestAccounts) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.123s
+
+OK
+
+All Accounts service tests passed successfully with CORS policies enabled.
