@@ -1,8 +1,4 @@
 {
-  "status": "running",
-  "app_name": "AccountsService",
-  "version": "1.0.0",
-  "port": 8080,
-  "message": "Application launched successfully in internal web browser",
-  "timestamp": "2025-12-28T16:00:00Z"
+  "name": "Account REST API Service",
+  "version": "1.0"
 }
