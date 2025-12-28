@@ -1,0 +1,17 @@
+$ kubectl get deployments
+NAME                READY   UP-TO-DATE   AVAILABLE   AGE
+accounts-service    3/3     3            3           15m
+
+$ kubectl get pods
+NAME                                 READY   STATUS    RESTARTS   AGE
+accounts-service-abc123              1/1     Running   0          15m
+accounts-service-def456              1/1     Running   0          15m
+accounts-service-ghi789              1/1     Running   0          15m
+
+$ kubectl get replicasets
+NAME                         DESIRED   CURRENT   READY   AGE
+accounts-service-abc123      3         3         3       15m
+
+$ kubectl get services
+NAME                TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)    AGE
+accounts-service    ClusterIP   10.96.123.456    <none>        8080/TCP   15m
