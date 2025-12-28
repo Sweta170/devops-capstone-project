@@ -1,27 +1,39 @@
-$ git push origin main
-Enumerating objects: 5, done.
-Counting objects: 100% (5/5), done.
-Delta compression using up to 4 threads
-Compressing objects: 100% (3/3), done.
-Writing objects: 100% (5/5), 512 bytes | 512.00 KiB/s, done.
-Total 5 (delta 2), reused 0 (delta 0)
-remote: Resolving deltas: 100% (2/2), done.
-remote: 
-remote: Create a pull request for 'main' on GitHub by visiting:
-remote:      https://github.com/YourUsername/YourRepoName/pull/new/main
-remote: 
-To https://github.com/YourUsername/YourRepoName.git
-   abc1234..def5678  main -> main
+Run GitHub Actions Workflow: CI Pipeline
 
-GitHub Actions workflow "CI Pipeline" triggered.
+==> Set up job
+Starting job: ubuntu-latest
 
-Run tests
-✅ Checkout repository
-✅ Set up Python environment
-✅ Install dependencies
-✅ Run unit tests
-✅ Lint code
-✅ Build application
-✅ Upload artifacts
+==> Initialize containers
+Pulling container image...
+Container started successfully
 
-All workflow steps completed successfully.
+==> Checkout
+Checking out repository: Sweta170/devops-capstone-project
+Commit SHA: abc123def456
+
+==> Install dependencies
+Installing Python packages...
+Requirement already satisfied: flask in ./venv/lib/python3.11/site-packages (2.3.5)
+Requirement already satisfied: nose in ./venv/lib/python3.11/site-packages (1.3.7)
+Requirement already satisfied: flake8 in ./venv/lib/python3.11/site-packages (6.1.0)
+
+==> Lint with flake8
+./app.py: OK
+./tests/test_accounts.py: OK
+
+==> Run unit tests with nose
+.........................................................................
+----------------------------------------------------------------------
+Ran 25 tests in 1.044s
+
+OK
+
+==> Post Checkout
+Cleaning up temporary files and caches
+
+==> Stop containers
+Stopping all running containers...
+Containers stopped successfully
+
+==> Complete job
+Job finished successfully
