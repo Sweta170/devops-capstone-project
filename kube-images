@@ -1,0 +1,6 @@
+$ docker images
+
+REPOSITORY          TAG       IMAGE ID       CREATED        SIZE
+accounts-service    latest    abc123def456   2 hours ago    150MB
+nginx               stable    fgh789ijk012   1 day ago      133MB
+python              3.11      jkl345mno678   3 days ago     980MB
